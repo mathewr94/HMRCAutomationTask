@@ -39,8 +39,8 @@
     <groups>
     </groups>
     <test started-at="2022-05-12T16:24:39 BST" name="SeleniumAutomationFramework" finished-at="2022-05-12T16:25:18 BST" duration-ms="38140">
-      <class name="testscript.AddHighestPriceDressTestToCart">
-        <test-method signature="addHighestPriceDressTestToCart()[pri:0, instance:testscript.AddHighestPriceDressTestToCart@64d2d351]" started-at="2022-05-12T16:24:39 BST" name="addHighestPriceDressTestToCart" finished-at="2022-05-12T16:25:18 BST" duration-ms="38123" status="PASS">
+      <class name="testscript.AddHighestPriceDressToCartTest">
+        <test-method signature="addHighestPriceDressTestToCart()[pri:0, instance:testscript.AddHighestPriceDressToCartTest@64d2d351]" started-at="2022-05-12T16:24:39 BST" name="addHighestPriceDressTestToCart" finished-at="2022-05-12T16:25:18 BST" duration-ms="38123" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Navigating to URL: http://automationpractice.com/index.php]]>
@@ -77,7 +77,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- addHighestPriceDressTestToCart -->
-      </class> <!-- testscript.AddHighestPriceDressTestToCart -->
+      </class> <!-- testscript.AddHighestPriceDressToCartTest -->
     </test> <!-- SeleniumAutomationFramework -->
   </suite> <!-- Default Suite -->
 </testng-results>

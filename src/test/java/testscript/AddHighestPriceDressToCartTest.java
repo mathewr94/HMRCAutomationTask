@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageinteractions.*;
 
-public class AddHighestPriceDressTestToCart {
+public class AddHighestPriceDressToCartTest {
     @Test
-    public void addHighestPriceDressTestToCart() throws InterruptedException {
+    public void addHighestPriceDressToCartTest() throws InterruptedException {
         WebDriver webDriver = new ChromeDriver();
         CommonInteractions onBrowser = new CommonInteractions(webDriver);
         AutomationPracticeHomePageInteractions onAutomationPracticeHomePage = new AutomationPracticeHomePageInteractions(webDriver);

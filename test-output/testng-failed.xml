@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="SeleniumAutomationFramework(failed)">
     <classes>
-      <class name="testscript.AddHighestPriceDressTestToCart">
+      <class name="testscript.AddHighestPriceDressToCartTest">
         <methods>
           <include name="addHighestPriceDressTestToCart"/>
         </methods>
-      </class> <!-- testscript.AddHighestPriceDressTestToCart -->
+      </class> <!-- testscript.AddHighestPriceDressToCartTest -->
     </classes>
   </test> <!-- SeleniumAutomationFramework(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
