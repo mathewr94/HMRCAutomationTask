@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SeleniumAutomationFramework(failed)">
+    <classes>
+      <class name="testscript.AddHighestPriceDressTestToCart">
+        <methods>
+          <include name="addHighestPriceDressTestToCart"/>
+        </methods>
+      </class> <!-- testscript.AddHighestPriceDressTestToCart -->
+    </classes>
+  </test> <!-- SeleniumAutomationFramework(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
