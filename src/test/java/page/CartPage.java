@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 
 // The CartPage class contains locators for elements which are on the cart page
 public class CartPage {
-    public static final By cartRows = By.xpath("//table[@id='cart_summary']//tbody//tr");
+
+    public static final By cartRows = By.cssSelector("table#cart_summary tbody tr");
     public static By getProductSKUByIndex (int index) {
         return By.xpath("(//td[@class='cart_description']//small[@class='cart_ref'])[" + index + "]");
     }

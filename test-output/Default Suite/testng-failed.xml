@@ -5,7 +5,7 @@
     <classes>
       <class name="testscript.AddHighestPriceDressToCartTest">
         <methods>
-          <include name="addHighestPriceDressTestToCart"/>
+          <include name="addHighestPriceDressToCartTest"/>
         </methods>
       </class> <!-- testscript.AddHighestPriceDressToCartTest -->
     </classes>
