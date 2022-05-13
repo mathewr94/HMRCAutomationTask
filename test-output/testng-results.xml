@@ -35,12 +35,12 @@
       <![CDATA[addHighestPriceDressTestToCart test completed successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-05-12T16:24:39 BST" name="Default Suite" finished-at="2022-05-12T16:25:18 BST" duration-ms="38140">
+  <suite started-at="2022-05-13T12:13:58 BST" name="Default Suite" finished-at="2022-05-13T12:14:31 BST" duration-ms="32636">
     <groups>
     </groups>
-    <test started-at="2022-05-12T16:24:39 BST" name="SeleniumAutomationFramework" finished-at="2022-05-12T16:25:18 BST" duration-ms="38140">
+    <test started-at="2022-05-13T12:13:58 BST" name="SeleniumAutomationFramework" finished-at="2022-05-13T12:14:31 BST" duration-ms="32636">
       <class name="testscript.AddHighestPriceDressToCartTest">
-        <test-method signature="addHighestPriceDressTestToCart()[pri:0, instance:testscript.AddHighestPriceDressToCartTest@64d2d351]" started-at="2022-05-12T16:24:39 BST" name="addHighestPriceDressTestToCart" finished-at="2022-05-12T16:25:18 BST" duration-ms="38123" status="PASS">
+        <test-method signature="addHighestPriceDressToCartTest()[pri:0, instance:testscript.AddHighestPriceDressToCartTest@448ff1a8]" started-at="2022-05-13T12:13:58 BST" name="addHighestPriceDressToCartTest" finished-at="2022-05-13T12:14:31 BST" duration-ms="32618" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Navigating to URL: http://automationpractice.com/index.php]]>
@@ -76,7 +76,7 @@
               <![CDATA[addHighestPriceDressTestToCart test completed successfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- addHighestPriceDressTestToCart -->
+        </test-method> <!-- addHighestPriceDressToCartTest -->
       </class> <!-- testscript.AddHighestPriceDressToCartTest -->
     </test> <!-- SeleniumAutomationFramework -->
   </suite> <!-- Default Suite -->

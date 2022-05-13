@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import page.CartPage;
 
-import java.util.ArrayList;
-
 // The CartPageInteractions class contains interactions that you might use on the cart page
 public class CartPageInteractions extends CommonInteractions {
 

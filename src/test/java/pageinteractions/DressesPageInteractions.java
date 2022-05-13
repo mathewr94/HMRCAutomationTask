@@ -58,13 +58,4 @@ public class DressesPageInteractions extends CommonInteractions {
         dressPriceString = dressPriceString.trim(); // Remove any potential whitespace from the price
         return Float.parseFloat(dressPriceString);
     }
-
-//    private void selectHighestPriceDress(int index) {
-//        Reporter.log("Selecting the highest price dress");
-//        final By highestPriceDressNameLocator = DressesPage.getProductNameByIndex(index);
-//        WebElement highestPriceDressNameElement = webDriver.findElement(highestPriceDressNameLocator);
-//        // Scroll to the name of the highest price dress and click it
-//        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView(true);", highestPriceDressNameElement);
-//        highestPriceDressNameElement.click();
-//    }
 }

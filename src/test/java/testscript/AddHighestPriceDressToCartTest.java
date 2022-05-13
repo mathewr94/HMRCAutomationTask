@@ -2,6 +2,7 @@ package testscript;
 
 import constants.Url;
 import datavalidationclasses.ProductInformation;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -10,9 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageinteractions.*;
 
 public class AddHighestPriceDressToCartTest {
+    WebDriver webDriver;
     @Test
-    public void addHighestPriceDressToCartTest() throws InterruptedException {
-        WebDriver webDriver = new ChromeDriver();
+    public void addHighestPriceDressToCartTest() {
+        WebDriverManager.chromedriver().setup();
+        webDriver = new ChromeDriver();
         CommonInteractions onBrowser = new CommonInteractions(webDriver);
         AutomationPracticeHomePageInteractions onAutomationPracticeHomePage = new AutomationPracticeHomePageInteractions(webDriver);
         DressesPageInteractions onDressesPage = new DressesPageInteractions(webDriver);
@@ -29,14 +32,13 @@ public class AddHighestPriceDressToCartTest {
             onProductInfoPage.clickProceedToCheckoutButtonFromPopup();
             onCartPage.checkThatItemIsInCart(highestPriceDressInfo);
             Reporter.log("addHighestPriceDressTestToCart test completed successfully");
-            Thread.sleep(5000);
         } catch (Exception e) {
             // In case of an exception, log it and fail the test
             Reporter.log("Exception thrown: " + e.getMessage());
             Assert.fail("Failed due to exception thrown");
         } finally {
             // Make sure the WebDriver instance always gets closed in the end
-            webDriver.close();
+            webDriver.quit();
         }
     }
 }
