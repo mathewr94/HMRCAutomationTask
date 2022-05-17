@@ -19,7 +19,7 @@ public class CommonInteractions {
     }
     public void navigateToURL (String url) {
         Reporter.log("Navigating to URL: " + url);
-        webDriver.get(Url.automationPracticeWebsite);
+        webDriver.get(url);
     }
 
     public void waitForElementToBeClickable (By elementLocator) {
