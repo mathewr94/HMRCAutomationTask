@@ -49,6 +49,10 @@ public class DressesPageInteractions extends CommonInteractions {
                 highestPriceDressName = webDriver.findElement(DressesPage.getProductNameByIndex(highestPriceDressIndex)).getText();
             }
         }
+        if (!(highestDressPrice > 0.0)) {
+            Reporter.log("highestDressPrice value is invalid; Expected value greater than 0. Actual value = " + highestDressPrice);
+            Assert.fail();
+        }
         Reporter.log("Highest price dress found; Name = " + highestPriceDressName + ", Price = " + highestDressPrice);
         return highestPriceDressIndex;
     }
