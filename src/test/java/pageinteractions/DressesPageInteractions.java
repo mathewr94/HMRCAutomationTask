@@ -22,7 +22,7 @@ public class DressesPageInteractions extends CommonInteractions {
     public void selectHighestPriceDress() {
         final int indexOfHighestPriceDress = getIndexOfHighestPriceDress();
         Reporter.log("Selecting the highest price dress");
-        final By highestPriceDressNameLocator = DressesPage.getProductNameByIndex(indexOfHighestPriceDress);
+        final By highestPriceDressNameLocator = DressesPage.getDressNameByIndex(indexOfHighestPriceDress);
         WebElement highestPriceDressNameElement = webDriver.findElement(highestPriceDressNameLocator);
         // Scroll to the name of the highest price dress and click it
         ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView(true);", highestPriceDressNameElement);
@@ -46,7 +46,7 @@ public class DressesPageInteractions extends CommonInteractions {
             if (currentDressPrice > highestDressPrice) {
                 highestDressPrice = currentDressPrice;
                 highestPriceDressIndex = i + 1; // xPath indexes start at 1, not 0, so the index taken from the WebElement list needs to be incremented
-                highestPriceDressName = webDriver.findElement(DressesPage.getProductNameByIndex(highestPriceDressIndex)).getText();
+                highestPriceDressName = webDriver.findElement(DressesPage.getDressNameByIndex(highestPriceDressIndex)).getText();
             }
         }
         if (!(highestDressPrice > 0.0)) {

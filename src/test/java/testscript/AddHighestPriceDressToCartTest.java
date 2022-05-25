@@ -1,7 +1,7 @@
 package testscript;
 
 import constants.Url;
-import datavalidationclasses.ProductInformation;
+import datavalidationclass.ProductInformation;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.testng.Reporter;

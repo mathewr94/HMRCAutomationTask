@@ -1,6 +1,6 @@
 package pageinteractions;
 
-import datavalidationclasses.ProductInformation;
+import datavalidationclass.ProductInformation;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -20,19 +20,25 @@ public class CartPageInteractions extends CommonInteractions {
         Reporter.log("Checking that the " + expectedProductInfo.getProductName() + " product with SKU " + expectedProductInfo.getProductSKU() + " is in the cart");
         final int numberOfItemsInCart = webDriver.findElements(CartPage.cartRows).size();
         // Traverse all items in the cart and attempt to match to the expectedProductInfo provided
-        ProductInformation cartItemProductInfo = new ProductInformation();
+        ProductInformation cartItemProductInfo;
         for (int item = 1; item <= numberOfItemsInCart; item++) {
             cartItemProductInfo = getCartItemProductInfoByIndex(item);
             if (cartItemMatchesExpectedProduct(cartItemProductInfo, expectedProductInfo)) {
                 Reporter.log("Success: The " + expectedProductInfo.getProductName() + " product with SKU " + expectedProductInfo.getProductSKU() + " is in the cart");
                 return;
-            } else {
-                Reporter.log("expectedProductInfo: " + expectedProductInfo.getProductSKU() + expectedProductInfo.getProductName() + expectedProductInfo.getProductPrice() + expectedProductInfo.getProductQuantity());
-                Reporter.log("actualProductInfo: " + cartItemProductInfo.getProductSKU() + cartItemProductInfo.getProductName() + cartItemProductInfo.getProductPrice() + cartItemProductInfo.getProductQuantity());
             }
         }
         Reporter.log("Fail: The " + expectedProductInfo.getProductName() + " product with SKU " + expectedProductInfo.getProductSKU() + " is not in the cart");
         Assert.fail();
+    }
+
+    private ProductInformation getCartItemProductInfoByIndex (int index) {
+        ProductInformation cartItemProductInfo = new ProductInformation();
+        cartItemProductInfo.setProductSKU(webDriver.findElement(CartPage.getProductSKUByIndex(index)).getText().split(":")[1].trim()); // The full label text will always contain "SKU : " before the SKU #, so take everything after the : symbol and trim whitespace
+        cartItemProductInfo.setProductName(webDriver.findElement(CartPage.getProductNameByIndex(index)).getText());
+        cartItemProductInfo.setProductPrice(webDriver.findElement(CartPage.getProductPriceByIndex(index)).getText());
+        cartItemProductInfo.setProductQuantity(Integer.parseInt(webDriver.findElement(CartPage.getProductQuantityByIndex(index)).getAttribute("value")));
+        return cartItemProductInfo;
     }
 
     private boolean cartItemMatchesExpectedProduct(ProductInformation cartItemProductInfo, ProductInformation expectedProductInfo) {
@@ -65,14 +71,5 @@ public class CartPageInteractions extends CommonInteractions {
         }
 
         return skuValuesMatch && nameValuesMatch && priceValuesMatch && quantityValuesMatch;
-    }
-
-    private ProductInformation getCartItemProductInfoByIndex (int index) {
-        ProductInformation cartItemProductInfo = new ProductInformation();
-        cartItemProductInfo.setProductSKU(webDriver.findElement(CartPage.getProductSKUByIndex(index)).getText().split(":")[1].trim()); // The full label text will always contain "SKU : " before the SKU #, so take everything after the : symbol and trim whitespace
-        cartItemProductInfo.setProductName(webDriver.findElement(CartPage.getProductNameByIndex(index)).getText());
-        cartItemProductInfo.setProductPrice(webDriver.findElement(CartPage.getProductPriceByIndex(index)).getText());
-        cartItemProductInfo.setProductQuantity(Integer.parseInt(webDriver.findElement(CartPage.getProductQuantityByIndex(index)).getAttribute("value")));
-        return cartItemProductInfo;
     }
 }

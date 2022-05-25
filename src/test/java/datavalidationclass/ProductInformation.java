@@ -1,4 +1,4 @@
-package datavalidationclasses;
+package datavalidationclass;
 
 public class ProductInformation {
     private String productSKU;

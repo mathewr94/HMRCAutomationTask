@@ -1,6 +1,6 @@
 package pageinteractions;
 
-import datavalidationclasses.ProductInformation;
+import datavalidationclass.ProductInformation;
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 import page.ProductInformationPage;
